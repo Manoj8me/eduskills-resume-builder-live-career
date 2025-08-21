@@ -18,7 +18,7 @@ const AppRoutes = () => {
         <Suspense fallback={<div>Loading...</div>}>
             <Routes>
                 {/* Home route for BuildCV */}
-                <Route path="/build-cv" element={<BuildCV />} />
+                <Route path="/" element={<BuildCV />} />
                 <Route path="/build-cv/onboarding/experiencelevel" element={<ExperienceLevel />} />
                 <Route path='/build-cv/onboarding/industry' element={<Industry />} />
                 <Route path='/build-cv/onboarding/career' element={<Career />} />

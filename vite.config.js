@@ -4,6 +4,7 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
+  base: "/eduskills-resume-builder-live-career/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
