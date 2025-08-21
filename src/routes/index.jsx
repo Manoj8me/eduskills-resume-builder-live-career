@@ -17,8 +17,11 @@ const AppRoutes = () => {
     return (
         <Suspense fallback={<div>Loading...</div>}>
             <Routes>
-                {/* Home route for BuildCV */}
-                <Route path="/" element={<BuildCV />} />
+                {/* Redirect root ("/") to your actual homepage */}
+                <Route path="/" element={<Navigate to="/build-cv" replace />} />
+
+                {/* Main routes */}
+                <Route path="/build-cv" element={<BuildCV />} />
                 <Route path="/build-cv/onboarding/experiencelevel" element={<ExperienceLevel />} />
                 <Route path='/build-cv/onboarding/industry' element={<Industry />} />
                 <Route path='/build-cv/onboarding/career' element={<Career />} />
@@ -29,6 +32,8 @@ const AppRoutes = () => {
                 <Route path='/build-cv/section/expr-det' element={<ExperienceDetails />} />
                 <Route path='/build-cv/tips/educ' element={<TipsEducation />} />
                 <Route path='/build-cv/section/educ-det' element={<EducationDetails />} />
+                {/* Catch-all: redirect any unknown path to home */}
+                {/* <Route path="*" element={<Navigate to="/build-cv" replace />} /> */}
             </Routes>
         </Suspense>
     );
